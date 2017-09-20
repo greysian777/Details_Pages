@@ -14,7 +14,7 @@ require 'scraperwiki/simple_html_dom.php';
 //$links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3");
 
 //$links = array("https://forlap.ristekdikti.go.id/prodi/detail/NTk5NDRFQjEtQTY0MC00MzU3LTlEN0ItODlCMTlDMjY0NkM1");
-$links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3");
+$links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3","https://forlap.ristekdikti.go.id/prodi/detail/RjVFNTU2QUItMEM5Mi00ODU4LTkzNTAtRDA5NEMwRUZGOTUx");
 for($i = 0; $i < count($links); $i++)
  {
    $first_tab_data = file_get_html($links[$i]);
