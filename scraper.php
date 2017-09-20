@@ -10,13 +10,10 @@
 
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-
-//$links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3");
-
-//$links = array("https://forlap.ristekdikti.go.id/prodi/detail/NTk5NDRFQjEtQTY0MC00MzU3LTlEN0ItODlCMTlDMjY0NkM1");
 $links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3","https://forlap.ristekdikti.go.id/prodi/detail/RjVFNTU2QUItMEM5Mi00ODU4LTkzNTAtRDA5NEMwRUZGOTUx","https://forlap.ristekdikti.go.id/prodi/detail/N0NCQzZFMjMtNjE0OC00NEM3LUE0QTUtMTQzRTU5RDFCMDk5");
 for($i = 0; $i < count($links); $i++)
  {
+	 //Study Program Details 
    $first_tab_data = file_get_html($links[$i]);
    if($first_tab_data){
 	   //First Tab Data..
@@ -139,6 +136,16 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 	
    }
    
- }
+ }	
+ //	$links[$i]
+ //	echo $Status_Prodi.'<br/>'.$Perguruan_Tinggi.'<br/>'.$Kode.'<br/>'.$Nama.'<br/>'.$Tanggal_Berdiri.'<br/>'.$SK_Penyelenggaraan.'<br/>'.$Tanggal_SK
+		//		 .'<br/>'.$Rasio.'<br/>'.$Alamat.'<br/>'.$Kode_Pos.'<br/>'.$Telepon.'<br/>'.$Faximile.'<br/>'.$email.'<br/>'.$site.'<br/>'.;
+ 
+  $record = array( 'StudyProgramLink' =>$links[$i], 'Status_Prodi' => $Status_Prodi ,'Perguruan_Tinggi' => $Perguruan_Tinggi,'Kode' => $Kode , 'Nama' => $Nama , 'Tanggal_Berdiri' => $Tanggal_Berdiri, 'SK_Penyelenggaraan' => $SK_Penyelenggaraan, 'Tanggal_SK' => $Tanggal_SK , 'Rasio' => $Rasio, 'Alamat' => $Alamat, 'Kode_Pos' => $Kode_Pos
+  , 'Telepon' => $Telepon,
+  , 'Faximile' => $Faximile
+  , 'email' => $email
+  , 'site' => $site);
+ scraperwiki::save(array('num','studenturl','name','jenis','perguruan','program','semester','statusawal','statusmahasiswa','namehref','link'), $record); 
  }
    ?>
