@@ -146,6 +146,6 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   , 'Faximile' => $Faximile
   , 'email' => $email
   , 'site' => $site);
- scraperwiki::save(array('num','studenturl','name','jenis','perguruan','program','semester','statusawal','statusmahasiswa','namehref','link'), $record); 
+ scraperwiki::save(array('StudyProgramLink','Status_Prodi','Perguruan_Tinggi','Kode','Nama','Tanggal_Berdiri','SK_Penyelenggaraan','Tanggal_SK','Rasio','Alamat','Kode_Pos','Telepon','Faximile','email','site'), $record); 
  }
    ?>
