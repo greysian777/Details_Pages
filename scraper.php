@@ -142,7 +142,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 		//		 .'<br/>'.$Rasio.'<br/>'.$Alamat.'<br/>'.$Kode_Pos.'<br/>'.$Telepon.'<br/>'.$Faximile.'<br/>'.$email.'<br/>'.$site.'<br/>'.;
  
   $record = array( 'StudyProgramLink' =>$links[$i], 'Status_Prodi' => $Status_Prodi ,'Perguruan_Tinggi' => $Perguruan_Tinggi,'Kode' => $Kode , 'Nama' => $Nama , 'Tanggal_Berdiri' => $Tanggal_Berdiri, 'SK_Penyelenggaraan' => $SK_Penyelenggaraan, 'Tanggal_SK' => $Tanggal_SK , 'Rasio' => $Rasio, 'Alamat' => $Alamat, 'Kode_Pos' => $Kode_Pos
-  , 'Telepon' => $Telepon,
+  , 'Telepon' => $Telepon
   , 'Faximile' => $Faximile
   , 'email' => $email
   , 'site' => $site);
