@@ -141,11 +141,11 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
  //	echo $Status_Prodi.'<br/>'.$Perguruan_Tinggi.'<br/>'.$Kode.'<br/>'.$Nama.'<br/>'.$Tanggal_Berdiri.'<br/>'.$SK_Penyelenggaraan.'<br/>'.$Tanggal_SK
 		//		 .'<br/>'.$Rasio.'<br/>'.$Alamat.'<br/>'.$Kode_Pos.'<br/>'.$Telepon.'<br/>'.$Faximile.'<br/>'.$email.'<br/>'.$site.'<br/>'.;
  
-  $record = array( 'studyprogramlink' =>$links[$i], 'Status_Prodi' => $Status_Prodi ,'Perguruan_Tinggi' => $Perguruan_Tinggi,'Kode' => $Kode , 'Nama' => $Nama , 'Tanggal_Berdiri' => $Tanggal_Berdiri, 'SK_Penyelenggaraan' => $SK_Penyelenggaraan, 'Tanggal_SK' => $Tanggal_SK , 'Rasio' => $Rasio, 'Alamat' => $Alamat, 'Kode_Pos' => $Kode_Pos
-  , 'Telepon' => $Telepon
-  , 'Faximile' => $Faximile
+  $record = array( 'studyprogramlink' =>$links[$i], 'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_Berdiri' => $Tanggal_Berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
+  , 'telepon' => $Telepon
+  , 'faximile' => $Faximile
   , 'email' => $email
   , 'site' => $site);
- scraperwiki::save(array('studyprogramlink','Status_Prodi','Perguruan_Tinggi','Kode','Nama','Tanggal_Berdiri','SK_Penyelenggaraan','Tanggal_SK','Rasio','Alamat','Kode_Pos','Telepon','Faximile','email','site'), $record); 
+ scraperwiki::save(array('studyprogramlink','status_prodi','perguruan_tinggi','kode','nama','tanggal_Berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'), $record); 
  }
    ?>
