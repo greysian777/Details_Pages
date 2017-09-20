@@ -110,7 +110,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			{
 		   
  			  
-		  echo $Pagestudent    =   file_get_html($URL);
+		  $Pagestudent    =   file_get_html($URL);
 			   
 			   
 		   if($Pagestudent)
