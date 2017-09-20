@@ -134,15 +134,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 	
    }
    
- }					$nama_lec 	
-					$perguruan_tinggi_lec
-					$program_studi_lec
-					$jenis_kelamin_lec
-					$jabatan_fungsional_lec
-					$pendidikan_tertinggi_lec
-					$status_ikatan_kerja_lec
-					$status_aktivitas_lec
-					$lecturesprofiles
+ }				
   
  
 
