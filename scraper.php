@@ -49,7 +49,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
            $Lecturesprofiles = $data[$loopo];
 		   if($Lecturesprofiles != "")
 			{		
-					echo $Lecture_Details = file_get_html($Lecturesprofiles);
+					 $Lecture_Details = file_get_html($Lecturesprofiles);
 					if($Lecture_Details)
 					{
 						//This is for Lectres Details of 2nd Tab
@@ -92,7 +92,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
        if($urls != "/0")
        {
 	    
-		echo $DAKUMENTPAGE = file_get_html($urls);
+		 $DAKUMENTPAGE = file_get_html($urls);
         if($DAKUMENTPAGE)
         {
          foreach($DAKUMENTPAGE->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr") as $SARTOUT)
