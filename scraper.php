@@ -130,7 +130,8 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   ,'semester_student' => $semester_student
   ,'status_awal_student' => $status_awal_student
   ,'status_mahasiswa_student' => $status_mahasiswa_student
-,'nama_lec' => $nama_lec);
+,'nama_lec' => $nama_lec
+, 'Lecturesprofiles' => $Lecturesprofiles);
   
  scraperwiki::save(array('studyprogramlink','html_encoded','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'
 			,'url_of_student_details'
@@ -143,7 +144,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			,'status_awal_student'
 			,'status_awal_student'
 			,'nama_lec'), $record); 
-			}
+			,'Lecturesprofiles'}
 	 
 				 
 				 
