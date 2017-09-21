@@ -116,7 +116,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 		   
 		   }
 					
-					}  $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
+					 $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
   , 'telepon' => $Telepon
   , 'faximile' => $Faximile
   , 'email' => $email
@@ -131,7 +131,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   ,'status_awal_student' => $status_awal_student
   ,'status_mahasiswa_student' => $status_mahasiswa_student
 ,'nama_lec' => $nama_lec
-, 'Lecturesprofiles' => $Lecturesprofiles);
+);
   
  scraperwiki::save(array('studyprogramlink','html_encoded','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'
 			,'url_of_student_details'
@@ -144,7 +144,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			,'status_awal_student'
 			,'status_awal_student'
 			,'nama_lec'
-			,'Lecturesprofiles'), $record); 
+			), $record); } 
 			}
 	 
 				 
