@@ -54,7 +54,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 					if($Lecture_Details)
 					{
 						//This is for Lectres Details of 2nd Tab
-						$nama_lec 			  		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[3]",0)->plaintext;
+						$info['nama_lec'] 			  		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[3]",0)->plaintext;
 						$perguruan_tinggi_lec 				= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td[3]",0)->plaintext;
 						$program_studi_lec 				= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[3]/td[3]",0)->plaintext;
 						$jenis_kelamin_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[4]/td[3]",0)->plaintext;
@@ -124,12 +124,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 	   $semester_student  			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[7]/td[3]",0)->plaintext;
            $status_awal_student   		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[8]/td[3]",0)->plaintext;
            $status_mahasiswa_student 		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[9]/td[3]",0)->plaintext;
-
-			   
- 
- 
-		   
-		echo '<br/>'.$nama_lec;   
+	echo '<br/>'.$nama_lec;   
 		   $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
   , 'telepon' => $Telepon
   , 'faximile' => $Faximile
@@ -144,22 +139,20 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   ,'semester_student' => $semester_student
   ,'status_awal_student' => $status_awal_student
   ,'status_mahasiswa_student' => $status_mahasiswa_student
-  ,'nama_lec'			=>	$nama_lec
-  ,'perguruan_tinggi_lec'		=>	$perguruan_tinggi_lec
+  ,'nama_lec'			=>	$info['nama_lec'] 
+		 );
+			/*  
+			,'perguruan_tinggi_lec'		=>	$perguruan_tinggi_lec
   ,'program_studi_lec'		=>	$program_studi_lec
   ,'jenis_kelamin_lec'		=>	$jenis_kelamin_lec
   ,'jabatan_fungsional_lec'	=>	$jabatan_fungsional_lec
   ,'pendidikan_tertinggi_lec'	=>	$pendidikan_tertinggi_lec
   ,'status_ikatan_kerja_lec'	=>	$status_ikatan_kerja_lec
-  ,'status_aktivitas_lec'		=>	$status_aktivitas_lec		 
-		 
-		 );
-			   
-			   
+  ,'status_aktivitas_lec'		=>	$status_aktivitas_lec	   
 			   
 					   
 			   		
-			   
+		*/	   
 			   
 			   
   
@@ -174,13 +167,18 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			,'status_awal_student'
 			,'status_awal_student'
 			,'nama_lec'			
-			  ,'perguruan_tinggi_lec'	
+			  /*,'perguruan_tinggi_lec'	
 			  ,'program_studi_lec'		
 			  ,'jenis_kelamin_lec'		
 			  ,'jabatan_fungsional_lec'
 			  ,'pendidikan_tertinggi_lec'	
 			  ,'status_ikatan_kerja_lec'	
-			  ,'status_aktivitas_lec'), $record); 
+			  ,'status_aktivitas_lec'*/), $record); 	
+			   
+ 
+ 
+		   
+		
 		   
 		   } 
 			}
