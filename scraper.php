@@ -7,10 +7,11 @@
 //
 
 //require 'simple_html_dom.php';
+//$links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3","https://forlap.ristekdikti.go.id/prodi/detail/RjVFNTU2QUItMEM5Mi00ODU4LTkzNTAtRDA5NEMwRUZGOTUx","https://forlap.ristekdikti.go.id/prodi/detail/N0NCQzZFMjMtNjE0OC00NEM3LUE0QTUtMTQzRTU5RDFCMDk5");
 
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-$links = array("https://forlap.ristekdikti.go.id/prodi/detail/M0VEMjk1MjQtMjhDMS00NzU3LTlFREYtMEEwRTlFQUMwNjk3","https://forlap.ristekdikti.go.id/prodi/detail/RjVFNTU2QUItMEM5Mi00ODU4LTkzNTAtRDA5NEMwRUZGOTUx","https://forlap.ristekdikti.go.id/prodi/detail/N0NCQzZFMjMtNjE0OC00NEM3LUE0QTUtMTQzRTU5RDFCMDk5");
+$links = array("https://forlap.ristekdikti.go.id/prodi/detail/N0NCQzZFMjMtNjE0OC00NEM3LUE0QTUtMTQzRTU5RDFCMDk5");
 for($i = 0; $i < count($links); $i++)
  {
 	 //Study Program Details 
