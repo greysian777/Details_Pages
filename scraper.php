@@ -43,26 +43,26 @@ if($Checking != "Data tidak ditemukan")
 //This is for 2nd Tab
 foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
      {
-		 $Nametab 		= 	$secondtab->find("td[2]/a",0)->href;
-		 $data = array($Nametab);
-          for($i = 0 ; $i < sizeof($data); $i ++)
+		 $Name 		= 	$secondtab->find("td[2]/a",0)->href;
+		 $data = array($Name);
+          for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
           {
-           $Lecturesprofiles = $data[$i];
+           $Lecturesprofiles = $data[$loopo];
 		   if($Lecturesprofiles != "")
 			{		
 					 $Lecture_Details = file_get_html($Lecturesprofiles);
 					if($Lecture_Details)
 					{
 						//This is for Lectres Details of 2nd Tab
-						$info['nama_lec'] 			  		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[3]",0)->plaintext;
-						$perguruan_tinggi_lec 				= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td[3]",0)->plaintext;
-						$program_studi_lec 				= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[3]/td[3]",0)->plaintext;
-						$jenis_kelamin_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[4]/td[3]",0)->plaintext;
-						$jabatan_fungsional_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[5]/td[3]",0)->plaintext;
-						$pendidikan_tertinggi_lec			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[6]/td[3]",0)->plaintext;
-						$status_ikatan_kerja_lec			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[7]/td[3]",0)->plaintext;
-						$status_aktivitas_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[8]/td[3]",0)->plaintext;
-												
+						$nama_lec 			  		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[3]",0)->plaintext;
+						$perguruan_tinggi_lec 		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td[3]",0)->plaintext;
+						$program_studi_lec 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[3]/td[3]",0)->plaintext;
+						$jenis_kelamin_lec	 		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[4]/td[3]",0)->plaintext;
+						$jabatan_fungsional_lec	 	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[5]/td[3]",0)->plaintext;
+						$pendidikan_tertinggi_lec	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[6]/td[3]",0)->plaintext;
+						$status_ikatan_kerja_lec	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[7]/td[3]",0)->plaintext;
+						$status_aktivitas_lec	 	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[8]/td[3]",0)->plaintext;
+						
 					
 					}
 			}
@@ -124,8 +124,9 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 	   $semester_student  			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[7]/td[3]",0)->plaintext;
            $status_awal_student   		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[8]/td[3]",0)->plaintext;
            $status_mahasiswa_student 		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[9]/td[3]",0)->plaintext;
-	echo '<br/>'.$nama_lec;   
-		   $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
+
+			   
+  $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
   , 'telepon' => $Telepon
   , 'faximile' => $Faximile
   , 'email' => $email
@@ -138,23 +139,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   ,'nomor_student' => $nomor_student
   ,'semester_student' => $semester_student
   ,'status_awal_student' => $status_awal_student
-  ,'status_mahasiswa_student' => $status_mahasiswa_student
-  ,'nama_lec'			=>	$info['nama_lec'] 
-		 );
-			/*  
-			,'perguruan_tinggi_lec'		=>	$perguruan_tinggi_lec
-  ,'program_studi_lec'		=>	$program_studi_lec
-  ,'jenis_kelamin_lec'		=>	$jenis_kelamin_lec
-  ,'jabatan_fungsional_lec'	=>	$jabatan_fungsional_lec
-  ,'pendidikan_tertinggi_lec'	=>	$pendidikan_tertinggi_lec
-  ,'status_ikatan_kerja_lec'	=>	$status_ikatan_kerja_lec
-  ,'status_aktivitas_lec'		=>	$status_aktivitas_lec	   
-			   
-					   
-			   		
-		*/	   
-			   
-			   
+  ,'status_mahasiswa_student' => $status_mahasiswa_student);
   
  scraperwiki::save(array('studyprogramlink','html_encoded','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'
 			,'url_of_student_details'
@@ -166,21 +151,11 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			,'semester_student'
 			,'status_awal_student'
 			,'status_awal_student'
-			,'nama_lec'			
-			  /*,'perguruan_tinggi_lec'	
-			  ,'program_studi_lec'		
-			  ,'jenis_kelamin_lec'		
-			  ,'jabatan_fungsional_lec'
-			  ,'pendidikan_tertinggi_lec'	
-			  ,'status_ikatan_kerja_lec'	
-			  ,'status_aktivitas_lec'*/), $record); 	
-			   
- 
+			), $record); 
  
 		   
-		
 		   
-		   } 
+		   }
 			}
 		  }
 		 }
