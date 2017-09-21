@@ -99,8 +99,10 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			   
 		   if($Pagestudent)
 		   {
-			echo $Pagestudent;  
+		 
 		   //This is Details of Students.
+	   
+	   $student_page_html 			= html_entity_decode($URL);
            $nama_student    			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[1]/td[3]",0)->plaintext;
            $jenis_student    			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[2]/td[3]",0)->plaintext;
            $perguruan_student     		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[4]/td[3]",0)->plaintext;
@@ -124,7 +126,7 @@ $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encode
   ,'semester_student' => $semester_student
   ,'status_awal_student' => $status_awal_student
   ,'status_mahasiswa_student' => $status_mahasiswa_student
-
+,'student_page_html' => $student_page_html
 );
   
  scraperwiki::save(array('studyprogramlink','html_encoded','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'
@@ -137,7 +139,7 @@ $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encode
 			,'semester_student'
 			,'status_awal_student'
 			,'status_awal_student'
-			
+			,'student_page_html'
 			), $record);
  
 		   
