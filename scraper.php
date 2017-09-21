@@ -45,9 +45,9 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
      {
 		 $Nametab 		= 	$secondtab->find("td[2]/a",0)->href;
 		 $data = array($Nametab);
-          for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
+          for($i = 0 ; $i < sizeof($data); $i ++)
           {
-           $Lecturesprofiles = $data[$loopo];
+           $Lecturesprofiles = $data[$i];
 		   if($Lecturesprofiles != "")
 			{		
 					 $Lecture_Details = file_get_html($Lecturesprofiles);
