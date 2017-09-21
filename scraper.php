@@ -64,7 +64,15 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 						
 					
 					}else{
-							$nama_lec = "Not Available";
+							$Lecturesprofiles			="Data is not Available";
+							$nama_lec 				= "Not Available";
+							$perguruan_tinggi_lec 			= "Not Available";
+							$program_studi_lec 			= "Not Available";
+							$jenis_kelamin_lec 			= "Not Available";
+							$jabatan_fungsional_lec 		= "Not Available";
+							$pendidikan_tertinggi_lec 		= "Not Available";
+							$status_ikatan_kerja_lec 		= "Not Available";
+							$status_aktivitas_lec 			= "Not Available";
 					}
 			}
 	 
