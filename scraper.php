@@ -143,8 +143,9 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			,'semester_student'
 			,'status_awal_student'
 			,'status_awal_student'
-			,'nama_lec'), $record); 
-			,'Lecturesprofiles'}
+			,'nama_lec'
+			,'Lecturesprofiles'), $record); 
+			}
 	 
 				 
 				 
