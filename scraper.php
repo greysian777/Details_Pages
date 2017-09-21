@@ -17,7 +17,7 @@ for($i = 0; $i < count($links); $i++)
    $first_tab_data = file_get_html($links[$i]);
    if($first_tab_data){
 	   //First Tab Data..
-	   	$html_encoded 			= html_entity_decode($first_tab_data);
+	   	$html_encoded 			= 	html_entity_decode($first_tab_data);
 		$Status_Prodi			= 	$first_tab_data->find("//*[@id='umum']/table/tbody/tr[1]/td[3]",0)->plaintext;
 		$Perguruan_Tinggi 		=	$first_tab_data->find("//*[@id='umum']/table/tbody/tr[2]/td[3]",0)->plaintext;
 		$Kode  				=	$first_tab_data->find("//*[@id='umum']/table/tbody/tr[3]/td[3]",0)->plaintext;
@@ -50,6 +50,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
            $Lecturesprofiles = $data[$loopo];
 		   if($Lecturesprofiles != "")
 			{		
+			   		echo "$Lecturesprofiles \n";
 					 $Lecture_Details = file_get_html($Lecturesprofiles);
 					if($Lecture_Details)
 					{
