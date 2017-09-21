@@ -7,7 +7,7 @@
 //require 'simple_html_dom.php';
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-$links = array("https://forlap.ristekdikti.go.id/prodi/detail/N0NCQzZFMjMtNjE0OC00NEM3LUE0QTUtMTQzRTU5RDFCMDk5");
+$links = array("https://forlap.ristekdikti.go.id/prodi/detail/N0YyMDFGNjEtMTRCRS00MERCLTkzQkYtQTcwMjM4QTc4NTJF");
 for($i = 0; $i < count($links); $i++)
  {
 	 //Study Program Details 
