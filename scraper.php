@@ -63,8 +63,6 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 						$status_aktivitas_lec	 	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[8]/td[3]",0)->plaintext;
 						
 					
-					}else{
-							$nama_lec = "Not Available";
 					}
 			}
 	 
@@ -117,30 +115,40 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 		   {
 			  
 		   //This is Details of Students.
-           $Nama_Student    			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[1]/td[3]",0)->plaintext;
-           $Jenis_Student    			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[2]/td[3]",0)->plaintext;
-           $Perguruan_Student     		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[4]/td[3]",0)->plaintext;
-           $Program_Student      		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[5]/td[3]",0)->plaintext;
-           $Nomor_Student       		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[6]/td[3]",0)->plaintext;
-	   $Semester_Student  			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[7]/td[3]",0)->plaintext;
-           $Status_Awal_Student   		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[8]/td[3]",0)->plaintext;
-           $Status_Mahasiswa_Student 		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[9]/td[3]",0)->plaintext;
-$record = array( 'studyprogramlink' =>$links[$i], 'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
+           $nama_student    			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[1]/td[3]",0)->plaintext;
+           $jenis_student    			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[2]/td[3]",0)->plaintext;
+           $perguruan_student     		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[4]/td[3]",0)->plaintext;
+           $program_student      		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[5]/td[3]",0)->plaintext;
+           $nomor_student       		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[6]/td[3]",0)->plaintext;
+	   $semester_student  			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[7]/td[3]",0)->plaintext;
+           $status_awal_student   		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[8]/td[3]",0)->plaintext;
+           $status_mahasiswa_student 		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[9]/td[3]",0)->plaintext;
+
+			   
+  $record = array( 'studyprogramlink' =>$links[$i], 'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
   , 'telepon' => $Telepon
   , 'faximile' => $Faximile
   , 'email' => $email
   ,'site' => $site
-  , 'lecturesprofiles' => $lecturesprofiles
-  , 'nama_lec' => $nama_lec
-  , 'perguruan_tinggi_lec' => $perguruan_tinggi_lec
-  , 'program_studi_lec' => $program_studi_lec
-  , 'jenis_kelamin_lec' => $jenis_kelamin_lec
-  , 'jabatan_fungsional_lec' => $jabatan_fungsional_lec
-  , 'pendidikan_tertinggi_lec' => $pendidikan_tertinggi_lec
-  , 'status_ikatan_kerja_lec' => $status_ikatan_kerja_lec
-  , 'status_aktivitas_lec' => $status_aktivitas_lec);
+  ,'nama_student' => $nama_student
+  ,'jenis_student' => $jenis_student
+  ,'perguruan_student' => $perguruan_student
+  ,'program_student' => $program_student
+  ,'nomor_student' => $nomor_student
+  ,'semester_student' => $semester_student
+  ,'status_awal_student' => $status_awal_student
+  ,'status_mahasiswa_student' => $status_mahasiswa_student);
   
- scraperwiki::save(array('studyprogramlink','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site','lecturesprofiles','nama_lec','perguruan_tinggi_lec','program_studi_lec','jenis_kelamin_lec','jabatan_fungsional_lec','pendidikan_tertinggi_lec','status_ikatan_kerja_lec','status_aktivitas_lec'), $record); 
+ scraperwiki::save(array('studyprogramlink','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'
+			,'nama_student'
+			,'jenis_student'
+			,'perguruan_student'
+			,'program_student'
+			,'nomor_student'
+			,'semester_student'
+			,'status_awal_student'
+			,'status_awal_student'
+			), $record); 
  
 		   
 		   
