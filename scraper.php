@@ -125,22 +125,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 	   $Semester_Student  			= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[7]/td[3]",0)->plaintext;
            $Status_Awal_Student   		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[8]/td[3]",0)->plaintext;
            $Status_Mahasiswa_Student 		= $Pagestudent->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/table/tbody/tr[9]/td[3]",0)->plaintext;
-		   }
-			}
-		  }
-		 }
-		}
-	   }
-	  }
-	}
-	
-   }
-   
- }				
-  
- 
-
-  $record = array( 'studyprogramlink' =>$links[$i], 'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
+$record = array( 'studyprogramlink' =>$links[$i], 'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
   , 'telepon' => $Telepon
   , 'faximile' => $Faximile
   , 'email' => $email
@@ -156,5 +141,23 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   , 'status_aktivitas_lec' => $status_aktivitas_lec);
   
  scraperwiki::save(array('studyprogramlink','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site','lecturesprofiles','nama_lec','perguruan_tinggi_lec','program_studi_lec','jenis_kelamin_lec','jabatan_fungsional_lec','pendidikan_tertinggi_lec','status_ikatan_kerja_lec','status_aktivitas_lec'), $record); 
- }
+ 
+		   
+		   
+		   }
+			}
+		  }
+		 }
+		}
+	   }
+	  }
+	}
+	
+   }
+   
+ }				
+  
+ 
+
+  }
    ?>
