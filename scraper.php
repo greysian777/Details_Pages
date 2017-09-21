@@ -130,7 +130,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
  
 		   
 		echo '<br/>'.$nama_lec;   
-		   } $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
+		   $record = array( 'studyprogramlink' =>$links[$i], 'html_encoded' => $html_encoded ,'status_prodi' => $Status_Prodi ,'perguruan_tinggi' => $Perguruan_Tinggi,'kode' => $Kode , 'nama' => $Nama , 'tanggal_berdiri' => $tanggal_berdiri, 'sk_penyelenggaraan' => $SK_Penyelenggaraan, 'tanggal_sk' => $Tanggal_SK , 'rasio' => $Rasio, 'alamat' => $Alamat, 'kode_pos' => $Kode_Pos
   , 'telepon' => $Telepon
   , 'faximile' => $Faximile
   , 'email' => $email
@@ -181,6 +181,8 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 			  ,'pendidikan_tertinggi_lec'	
 			  ,'status_ikatan_kerja_lec'	
 			  ,'status_aktivitas_lec'), $record); 
+		   
+		   } 
 			}
 		  }
 		 }
