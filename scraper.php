@@ -43,7 +43,7 @@ if($Checking != "Data tidak ditemukan")
 //This is for 2nd Tab
 foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
      {
-		 $Name 		= 	$secondtab->find("td[2]/a",0)->href;
+		 $Name 		= 	$secondtab->find("td/a",0)->href;
 		 $data = array($Name);
           for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
           {
