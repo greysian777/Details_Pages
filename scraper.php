@@ -43,8 +43,8 @@ if($Checking != "Data tidak ditemukan")
 //This is for 2nd Tab
 foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
      {
-		 $Name 		= 	$secondtab->find("td[2]/a",0)->href;
-		 $data = array($Name);
+		 $Nametab 		= 	$secondtab->find("td[2]/a",0)->href;
+		 $data = array($Nametab);
           for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
           {
            $Lecturesprofiles = $data[$loopo];
@@ -55,13 +55,13 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
 					{
 						//This is for Lectres Details of 2nd Tab
 						$nama_lec 			  		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[1]/td[3]",0)->plaintext;
-						$perguruan_tinggi_lec 		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td[3]",0)->plaintext;
-						$program_studi_lec 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[3]/td[3]",0)->plaintext;
-						$jenis_kelamin_lec	 		= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[4]/td[3]",0)->plaintext;
-						$jabatan_fungsional_lec	 	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[5]/td[3]",0)->plaintext;
-						$pendidikan_tertinggi_lec	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[6]/td[3]",0)->plaintext;
-						$status_ikatan_kerja_lec	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[7]/td[3]",0)->plaintext;
-						$status_aktivitas_lec	 	= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[8]/td[3]",0)->plaintext;
+						$perguruan_tinggi_lec 				= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[2]/td[3]",0)->plaintext;
+						$program_studi_lec 				= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[3]/td[3]",0)->plaintext;
+						$jenis_kelamin_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[4]/td[3]",0)->plaintext;
+						$jabatan_fungsional_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[5]/td[3]",0)->plaintext;
+						$pendidikan_tertinggi_lec			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[6]/td[3]",0)->plaintext;
+						$status_ikatan_kerja_lec			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[7]/td[3]",0)->plaintext;
+						$status_aktivitas_lec	 			= $Lecture_Details->find("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[2]/div[2]/table/tbody/tr[8]/td[3]",0)->plaintext;
 												
 					
 					}
