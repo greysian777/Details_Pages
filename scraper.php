@@ -130,6 +130,7 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   , 'faximile' => $Faximile
   , 'email' => $email
   ,'site' => $site
+  , 'url_of_student_details' => $URL
   ,'nama_student' => $nama_student
   ,'jenis_student' => $jenis_student
   ,'perguruan_student' => $perguruan_student
@@ -140,7 +141,8 @@ foreach($first_tab_data->find("//*[@id='dosen']/table/tbody/tr") as $secondtab)
   ,'status_mahasiswa_student' => $status_mahasiswa_student);
   
  scraperwiki::save(array('studyprogramlink','status_prodi','perguruan_tinggi','kode','nama','tanggal_berdiri','sk_penyelenggaraan','tanggal_sk','rasio','alamat','kode_pos','telepon','faximile','email','site'
-			,'nama_student'
+			,'url_of_student_details'
+			 ,'nama_student'
 			,'jenis_student'
 			,'perguruan_student'
 			,'program_student'
